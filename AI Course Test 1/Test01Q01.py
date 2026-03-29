@@ -1,6 +1,6 @@
 valid_grades = []
 
-while len(valid_grades) < 10:
+while True:
     try:
         grade = int(input("Enter a grade: "))
         if grade == -999:
