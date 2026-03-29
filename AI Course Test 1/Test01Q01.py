@@ -4,7 +4,7 @@ while True:
     try:
         grade = int(input("Enter a grade: "))
         if grade == -999:
-            if len(valid_grades) != 10:
+            if len(valid_grades) < 10:
                 print("Need at least 10 valid grades. Keep entering.")
                 continue
             break
@@ -14,7 +14,7 @@ while True:
         valid_grades.append(grade)
 
     except:
-        print("Invalid input")
+        print("Invalid input, skip")
 
 print(f"Number of valid grades: {len(valid_grades)}")
 print(f"Class average: {(sum(valid_grades) / len(valid_grades)):.2f}")
